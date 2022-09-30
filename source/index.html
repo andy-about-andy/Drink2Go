@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин по продаже кофейных напитков «Drink2Go»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -11,23 +16,23 @@
         <a class="main-header__logo">
           <img src="img/logo.svg" width="32" height="36" alt="Интернет-магазин по продаже кофейных напитков «Drink2Go»">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
           </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list site-list">
               <li class="site-list__item site-list__item--active">
-                <a href="#">Главная</a>
+                <a class="site-list__link" href="#">Главная</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a href="#">Каталог</a>
+                <a class="site-list__link" href="#">Каталог</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a href="#">Доставка</a>
+                <a class="site-list__link" href="#">Доставка</a>
               </li>
               <li class="site-list__item site-list__item--active">
-                <a href="#">О нас</a>
+                <a class="site-list__link" href="#">О нас</a>
               </li>
             </ul>
             <div class="main-nav__list user-list">
@@ -52,10 +57,10 @@
         <article class="product-new">
           <div class="carosel">
             <div class="slider-control">
-              <button class="slider-button slider-prev" type="button">
+              <button class="slider-control__button slider-control__button--prev" type="button">
                 <span class="visually-hidden">Предыдущий товар.</span>
               </button>
-              <button class="slider-button slider-next" type="button">
+              <button class="slider-control__button slider-control__button--next" type="button">
                 <span class="visually-hidden">Следующий товар.</span>
               </button>
             </div>
@@ -65,8 +70,8 @@
               <p class="product-new__product-name">Декаф Флэт Уайт</p>
               <p class="product-new__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
               <div class="product-new__order">
-                <span class="product-new__price">295₽</span>
-                <span class="product-new__price product-new__price--new-price">225₽</span>
+                <span class="product-new__price product-new__price--old-price">295₽</span>
+                <span class="product-new__price">225₽</span>
                 <button class="product-new__button button">Заказать</button>
               </div>
             </div>
@@ -77,27 +82,27 @@
     <main class="main-container">
       <section class="advantages">
         <div class="advantages__wrapper">
-          <h2 class="advantages__title title-badge">Преимущества</h2>
+          <h2 class="title-badge">Преимущества</h2>
           <p class="title-section">Главные причины выбрать Drink2Go</p>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--speed">
-              <h3 class="advantages__title title-item">Скорость</h3>
+              <h3 class="advantages__title">Скорость</h3>
               <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="advantages__item advantages__item--convenience">
-              <h3 class="advantages__title title-item">Удобство</h3>
+              <h3 class="advantages__title">Удобство</h3>
               <p class="advantages__description">Легко помещается и в карман, и в маленькую сумочку</p>
             </li>
             <li class="advantages__item advantages__item--cheerfulness">
-              <h3 class="advantages__title title-item">Бодрость</h3>
+              <h3 class="advantages__title">Бодрость</h3>
               <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="advantages__item advantages__item--environmental">
-              <h3 class="advantages__title title-item">Экологичность</h3>
+              <h3 class="advantages__title">Экологичность</h3>
               <p class="advantages__description">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
           </ul>
-        </div>        
+        </div>
       </section>
       <section class="catalog">
         <div class="catalog__wrapper">
@@ -105,7 +110,7 @@
           <p class="title-section">Каталог кофейных напитков</p>
           <div class="catalog__filter">
             <form class="form" action="https://echo.htmlacademy.ru" method="post">
-              <fieldset class="form__range-scale">
+              <fieldset class="form__range-scale filter">
                 <legend class="filter__title">Цена</legend>
                 <div class="range">
                   <div class="range__scale">
@@ -128,7 +133,7 @@
                   </div>
                 </div>
               </fieldset>
-              <fieldset class="form__group">
+              <fieldset class="form__group filter">
                 <legend class="filter__title">Наличие молока</legend>
                 <ul class="form__list form__list--radio">
                   <li class="form__item form__item--radio">
@@ -161,8 +166,8 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="form__group">
-                <legend class="form__title">Страна произрастания</legend>
+              <fieldset class="form__group filter">
+                <legend class="filter__title">Страна произрастания</legend>
                 <ul class="form__list">
                   <li class="form__item form__item--reckless-actions">
                     <label class="form__control">
@@ -207,6 +212,7 @@
               </div>
             </form>
             <section class="catalog__cards-list cards-list">
+              <h3 class="visually-hidden">Сортировка товаров</h3>
               <div class="cards-list__sorting-container sorting-container">
                 <span class="sorting-container__text">Сортировка:</span>
                 <select class="sorting-container__select-control">
@@ -218,7 +224,7 @@
               </div>
               <ul class="catalog__list">
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -231,7 +237,7 @@
                   </div>
                 </li>
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -244,7 +250,7 @@
                   </div>
                 </li>
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -257,7 +263,7 @@
                   </div>
                 </li>
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -270,7 +276,7 @@
                   </div>
                 </li>
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-5-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -283,7 +289,7 @@
                   </div>
                 </li>
                 <li class="catalog__item">
-                  <a href="#">
+                  <a class="catalog__link" href="#">
                     <picture>
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/photo-6-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
@@ -297,20 +303,20 @@
                 </li>
               </ul>
               <ul class="catalog__pagination pagination">
-                <li class="pagination-item">
-                  <a class="pagination-item-button pagination-prev pagination-disabled" href="#"></a>
+                <li class="pagination__item">
+                  <a class="pagination__item-button pagination__item-button--prev pagination__item-button--disabled" href="#"></a>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">1</a>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">1</a>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link pagination-current" href="#">2</a>
+                <li class="pagination__item">
+                  <a class="pagination__link pagination__link--current" href="#">2</a>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
                 </li>
-                <li class="pagination-item">
-                  <a class="pagination-item-button pagination-next" href="#"></a>
+                <li class="pagination__item">
+                  <a class="pagination__item-button pagination__item-button--next" href="#"></a>
                 </li>
               </ul>
             </section>
@@ -320,7 +326,7 @@
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="contacts__map">
+        <div class="main-footer__contacts-map contacts">
           <iframe class="contacts__map-inner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.20564173134!2d30.316861729229107!3d59.968266670063514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sby!4v1664530875812!5m2!1sru!2sby" width="320" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта с местом расположения интернет-магазина «Drink2Go»."></iframe>
         </div>
         <div class="main-footer__container">
@@ -368,34 +374,34 @@
             </ul>
           </div>
           <div class="main-footer__information">
-            <div class="main-footer__information-container information">
+            <div class="main-footer__information-container main-footer__information-container--information">
               <p class="main-footer__information-title">Интернет-магазин</p>
               <ul class="main-footer__information-list">
                 <li class="main-footer__information-item">
-                  <a href="#">Каталог</a>
+                  <a class="main-footer__link" href="#">Каталог</a>
                 </li>
                 <li class="main-footer__information-item">
-                  <a href="#">Доставка</a>
+                  <a class="main-footer__link" href="#">Доставка</a>
                 </li>
                 <li class="main-footer__information-item">
-                  <a href="#">Способы оплаты</a>
+                  <a class="main-footer__link" href="#">Способы оплаты</a>
                 </li>
                 <li class="main-footer__information-item">
-                  <a href="#">О нас</a>
+                  <a class="main-footer__link" href="#">О нас</a>
                 </li>
               </ul>
             </div>
-            <div class="main-footer__information-container maedia">
+            <div class="main-footer__information-container main-footer__information-container--media">
               <p class="main-footer__information-title">Медиа</p>
               <ul class="main-footer__information-list">
                 <li class="main-footer__information-item">
-                  <a href="#">Блог</a>
+                  <a class="main-footer__link" href="#">Блог</a>
                 </li>
                 <li class="main-footer__information-item">
-                  <a href="#">Интформация для СМИ</a>
+                  <a class="main-footer__link" href="#">Интформация для СМИ</a>
                 </li>
                 <li class="main-footer__information-item">
-                  <a href="#">Правовая ино=формация</a>
+                  <a class="main-footer__link" href="#">Правовая ино=формация</a>
                 </li>
               </ul>
             </div>
@@ -418,5 +424,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
