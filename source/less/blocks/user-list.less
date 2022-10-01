@@ -6,10 +6,62 @@
   display: flex;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    width: 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 262px;
+  }
 }
 
 .user-list__icon {
-  padding: 22px 22px;
+  position: relative;
+  width: 60px;
+  height: 60px;
   text-decoration: none;
+  color: @black;
 
+  span {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 114px;
+
+    span {
+      display: block;
+      padding: 32px 20px 0 44px;
+    }
+  }
+}
+
+.user-list__login-icon {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  background-color: tomato;
+
+  @media (min-width: @desktop-width) {
+    top: 32px;
+    left: 20px;
+  }
+}
+
+.user-list__basket-icon {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  background-color: tomato;
+
+  @media (min-width: @desktop-width) {
+    top: 32px;
+    left: 20px;
+  }
 }
