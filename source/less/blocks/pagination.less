@@ -3,6 +3,10 @@
   justify-content: space-between;
   margin: 0;
   padding: 40px 0 44px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: right;
+  }
 }
 
 .pagination__item {
@@ -13,6 +17,54 @@
   list-style-type: none;
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.pagination__item--secondary {
+  @media (min-width: @tablet-width) {
+    width: 150px;
+  }
+}
+
+.pagination__item--current {
+  @media (min-width: @tablet-width) {
+    margin: 0 20px;
+  }
+}
+
+.pagination__item-button--prev {
+  span {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: @primary;
+
+    span {
+      display: block;
+      padding-top: 8px;
+    }
+  }
+}
+
+.pagination__item-button--next {
+  span {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: @primary;
+
+    span {
+      display: block;
+      padding-top: 8px;
+    }
+  }
 }
 
 .pagination__link {
