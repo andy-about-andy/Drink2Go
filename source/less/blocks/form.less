@@ -19,7 +19,7 @@
 .form__range-scale {
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 24px;
 
   @media (min-width: @tablet-width) {
     width: 220px;
@@ -66,7 +66,7 @@
 
   @media (min-width: @tablet-width) {
     width: 148px;
-    line-height: 24px;
+    font-size: 14px;
   }
 }
 
@@ -78,6 +78,127 @@
 
   @media (min-width: @tablet-width) {
     width: 138px;
-    line-height: 24px;
   }
+}
+
+.form__item {
+  margin-bottom: 21px;
+  list-style-type: none;
+}
+
+.form__control-label {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form__list {
+  padding: 0;
+}
+
+
+// asdasda
+.form__control {
+  position: relative;
+  display: block;
+  padding-left: 52px;
+}
+
+
+.form__control--radio {
+  position: relative;
+  padding-left: 34px;
+
+  // @media (min-width: @tablet-width) {
+  //   padding-left: 58px;
+  // }
+}
+
+.form__control-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 2px solid #bdbdbd;
+  border-radius: 50%;
+
+  // @media (min-width: @tablet-width) {
+  //   top: -5px;
+  //   left: -1px;
+  // }
+}
+
+.form__control-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 22px;
+  background-color: #bdbdbd;
+  border: 2px solid #bdbdbd;
+  border-radius: 12px;
+}
+
+.form__control-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 0;
+}
+
+.form__control-input[type="checkbox"]:checked + .form__control-checkbox {
+  background-color: @primary;
+  border-color: @primary;
+}
+
+.form__control-input[type="checkbox"]:checked + .form__control-checkbox::after {
+  left: 21px;
+}
+
+.form__control-input[type="checkbox"]:hover + .form__control-checkbox {
+  background: rgba(120, 89, 207, 0.25);
+  border-color: #9070ec;
+}
+
+.form__control-input[type="checkbox"]:active + .form__control-checkbox {
+  border-color: @primary;
+}
+
+.form__control-input[type="checkbox"]:focus + .form__control-checkbox {
+  background: rgba(120, 89, 207, 0.25);
+  border-color: #9070ec;
+}
+
+// .form__control-input[type="radio"] + .form__control-mark {
+//   border-radius: 50%;
+// }
+
+.form__control-input[type="radio"]:checked + .form__control-mark::before {
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  background-color: @primary;
+  border-radius: 50%;
+}
+
+.form__control-input[type="radio"]:hover + .form__control-mark {
+  border-color: @primary;
+}
+
+.form__control-input[type="radio"]:active + .form__control-mark {
+  border-color: @primary;
+}
+
+.form__control-input[type="radio"]:focus + .form__control-mark {
+  border-color: @primary;
 }

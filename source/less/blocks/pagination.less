@@ -49,6 +49,25 @@
   }
 }
 
+.pagination__item--icon-prev {
+  display: block;
+  padding: 15px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__item--icon-next {
+  display: block;
+  padding: 15px;
+  transform: rotate(0.5turn);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .pagination__item-button--next {
   span {
     display: none;
