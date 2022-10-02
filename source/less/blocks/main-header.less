@@ -3,6 +3,16 @@
   margin: 0 auto;
   padding-bottom: 60px;
   background-color: #f3ebe1;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(180deg, rgba(243, 235, 225, 1) 75%, rgba(255, 255, 255, 1) 41%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 82px;
+    background: none;
+    background-color: #f3ebe1;
+  }
 }
 
 .main-header__container {
