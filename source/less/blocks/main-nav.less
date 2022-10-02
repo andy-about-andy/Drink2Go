@@ -34,9 +34,9 @@
   box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
 }
 
-.main-nav--closed .main-nav__toggle:active {
-  background-color: @secondary;
-}
+// .main-nav--closed .main-nav__toggle:active {
+//   background-color: @secondary;
+// }
 
 @media (max-width: @tablet-width) {
   .main-nav--closed .site-list__item {
@@ -49,23 +49,28 @@
 
   .main-nav--nojs .main-nav__wrapper {
     position: static;
+    box-shadow: 0 -1px 0 @secondary;
   }
 
   .main-nav--nojs .site-list__item {
     display: block;
   }
+
+  .main-nav--nojs .user-list {
+    top: 0;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
-  top: 18px;
-  right: 22px;
+  top: 0;
+  right: 0;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 11px;
-    right: 0;
+    top: 30px;
+    right: 22px;
     width: 16px;
     height: 2px;
     background-color: @black;

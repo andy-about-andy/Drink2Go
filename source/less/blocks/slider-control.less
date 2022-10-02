@@ -1,10 +1,50 @@
 .slider-control {
+  position: relative;
 
+  @media (min-width: @desktop-width) {
+    order: 1;
+  }
 }
 
 .slider-control__button {
   position: absolute;
-  top: 60px;
+  top: 0;
   left: 0;
+  width: 20px;
+  height: 714px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+  }
 }
 
+.slider-control__button--prev {
+  @media (min-width: @desktop-width) {
+    left: -488px;
+  }
+}
+
+.slider-control__button--next {
+  left: 300px;
+
+  @media (min-width: @tablet-width) {
+    left: 688px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 860px;
+  }
+}
+
+.slider-control__arrow-slider {
+
+}
+
+.slider-control__arrow-slider--next {
+  transform: rotate(0.5turn);
+}

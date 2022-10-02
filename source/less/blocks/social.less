@@ -9,10 +9,22 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
+  }
 }
 
 .social__item {
   width: 40px;
   height: 40px;
-  background-color: tomato;
+}
+
+.social__icon {
+  display: block;
+  padding: 10px;
+}
+
+.social__icon--pinterest {
+  padding: 9px;
 }

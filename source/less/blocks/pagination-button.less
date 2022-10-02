@@ -1,0 +1,37 @@
+.pagination-button {
+  position: absolute;
+  top: 630px;
+  left: 50%;
+  display: flex;
+  width: 202px;
+  height: 24px;
+}
+
+.pagination-button__slider {
+  position: relative;
+  width: 62px;
+  height: 24px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-button__slider:last-child {
+  margin: 0;
+}
+
+.pagination-button__slider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 64px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.pagination-button .pagination-button__slider--current::after {
+  background-color: @primary;
+}

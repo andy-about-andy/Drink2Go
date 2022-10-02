@@ -1,19 +1,139 @@
 .range {
-
-}
-
-.range__bar {
-  width: 241px;
+  position: relative;
+  max-width: 280px;
+  margin-top: 33px;
 
   @media (min-width: @tablet-width) {
     width: 220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.range__scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  margin-bottom: 35px;
+  background-color: #e2e2e2;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.range__bar {
+  position: absolute;
+  top: -1px;
+  width: 241px;
+  height: 4px;
+  background-color: #9070ec;
+
+  @media (min-width: @tablet-width) {
+    width: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 274px;
+  }
+}
+
+.range__toggle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+}
+
+.range__toggle--min {
+  top: -10px;
+  left: 0;
+}
+
+.range__toggle--max {
+  top: -10px;
+  left: 220px;
+
+  @media (min-width: @tablet-width) {
+    left: 180px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 270px;
   }
 }
 
 .range__wrapper-inputs {
-  width: 241px;
+  position: relative;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     width: 220px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 318px;
+  }
+}
+
+.range__wrapper-inputs::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 135px;
+  width: 9px;
+  height: 2px;
+  background-color: #bdbdbd;
+
+  @media (min-width: @tablet-width) {
+    left: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 155px;
+  }
+}
+
+.range__filter-label {
+
+}
+
+.range__input {
+  width: 118px;
+  height: 38px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    width: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+  }
+}
+
+.range__input[type="number"]::-webkit-outer-spin-button,
+.range__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.range__input[type="number"] {
+  -moz-appearance: textfield;
 }
