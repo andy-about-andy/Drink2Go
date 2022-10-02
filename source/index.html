@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Интернет-магазин по продаже кофейных напитков «Drink2Go»</title>
+    <title>Интернет-магазин «Drink2Go»</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratsemibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -93,7 +97,14 @@
               </button>
             </div>
             <div class="product-new__wrapper-image">
-              <img src="./img/slider/flat-white/flat-white-mobile.png" alt="">
+              <picture>
+                <source width="600" height="600" media="(min-width: 1440px)" type="image/webp" srcset="img/slider/flat-white/flat-white-desktop.webp 1x, img/slider/flat-white/flat-white-desktop@2x.webp 2x">
+                <source width="476" height="476" media="(min-width: 768px)" type="image/webp" srcset="img/slider/flat-white/flat-white-tablet.webp 1x, img/slider/flat-white/flat-white-tablet@2x.webp 2x">
+                <source width="280" height="280" type="image/webp" srcset="img/slider/flat-white/flat-white-mobile.webp 1x, img/slider/flat-white/flat-white-mobile@2x.webp 2x">
+                <source width="600" height="600" media="(min-width: 1440px)" srcset="img/slider/flat-white/flat-white-desktop.png 1x, img/slider/flat-white/flat-white-desktop@2x.png 2x">
+                <source width="476" height="476" media="(min-width: 768px)" srcset="img/slider/flat-white/flat-white-tablet.png 1x, img/slider/flat-white/flat-white-tablet@2x.png 2x">
+                <img width="280" height="280" src="img/slider/flat-white/flat-white-mobile.png" srcset="img/slider/flat-white/flat-white-mobile@2x.png" alt="Декаф Флэт Уайт">
+              </picture>
             </div>
             <div class="product-new__wrapper">
               <h2 class="title-badge title-badge--product-new">Новинка!</h2>
@@ -269,6 +280,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-1-desktop.webp 1x, img/catalog/coffee-1-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-1-tablet.webp 1x, img/catalog/coffee-1-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-1-mobile.webp 1x, img/catalog/coffee-1-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-1-desktop.png 1x, img/catalog/coffee-1-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-1-tablet.png 1x, img/catalog/coffee-1-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-1-mobile.png" srcset="img/catalog/coffee-1-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>
@@ -287,6 +303,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-2-desktop.webp 1x, img/catalog/coffee-2-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-2-tablet.webp 1x, img/catalog/coffee-2-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-2-mobile.webp 1x, img/catalog/coffee-2-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-2-desktop.png 1x, img/catalog/coffee-2-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-2-tablet.png 1x, img/catalog/coffee-2-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-2-mobile.png" srcset="img/catalog/coffee-2-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>
@@ -305,6 +326,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-3-desktop.webp 1x, img/catalog/coffee-3-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-3-tablet.webp 1x, img/catalog/coffee-3-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-3-mobile.webp 1x, img/catalog/coffee-3-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-3-desktop.png 1x, img/catalog/coffee-3-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-3-tablet.png 1x, img/catalog/coffee-3-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-3-mobile.png" srcset="img/catalog/coffee-3-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>
@@ -323,6 +349,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-4-desktop.webp 1x, img/catalog/coffee-4-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-4-tablet.webp 1x, img/catalog/coffee-4-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-4-mobile.webp 1x, img/catalog/coffee-4-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-4-desktop.png 1x, img/catalog/coffee-4-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-4-tablet.png 1x, img/catalog/coffee-4-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-4-mobile.png" srcset="img/catalog/coffee-4-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>
@@ -341,6 +372,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-5-desktop.webp 1x, img/catalog/coffee-5-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-5-tablet.webp 1x, img/catalog/coffee-5-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-5-mobile.webp 1x, img/catalog/coffee-5-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-5-desktop.png 1x, img/catalog/coffee-5-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-5-tablet.png 1x, img/catalog/coffee-5-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-5-mobile.png" srcset="img/catalog/coffee-5-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>
@@ -359,6 +395,11 @@
                 <li class="catalog__item">
                   <a class="catalog__link" href="#">
                     <picture>
+                      <source width="130" height="188" media="(min-width: 1440px)" type="image/webp" srcset="img/catalog/coffee-6-desktop.webp 1x, img/catalog/coffee-6-desktop@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" type="image/webp" srcset="img/catalog/coffee-6-tablet.webp 1x, img/catalog/coffee-6-tablet@2x.webp 2x">
+                      <source width="130" height="188" type="image/webp" srcset="img/catalog/coffee-6-mobile.webp 1x, img/catalog/coffee-6-mobile@2x.webp 2x">
+                      <source width="130" height="188" media="(min-width: 1440px)" srcset="img/catalog/coffee-6-desktop.png 1x, img/catalog/coffee-6-desktop@2x.png 2x">
+                      <source width="130" height="188" media="(min-width: 768px)" srcset="img/catalog/coffee-6-tablet.png 1x, img/catalog/coffee-6-tablet@2x.png 2x">
                       <img class="catalog__item-image" loading="lazy" width="130" height="188" src="img/catalog/coffee-6-mobile.png" srcset="img/catalog/coffee-6-mobile@2x.png 2x" alt="Кофе без кофеина из Эфиопии с натуральным фермерским молоком">
                     </picture>
                     <span class="catalog__product-name">Декаф Флэт Уайт</span>

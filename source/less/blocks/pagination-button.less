@@ -2,9 +2,13 @@
   position: absolute;
   top: 630px;
   left: 50%;
-  display: flex;
+  display: none;
   width: 202px;
   height: 24px;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .pagination-button__slider {
