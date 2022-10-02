@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин «Drink2Go»</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="leaflet/leaflet.css">
     <link rel="preload" href="fonts/montserrat.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratbold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserratmedium.woff2" as="font" crossorigin="anonymous">
@@ -50,14 +51,14 @@
                 </li>
               </ul>
               <div class="main-nav__list user-list">
-                <a class="user-list__icon" href="#">
-                  <svg class="user-list__login-icon" width="16" height="16">
+                <a class="user-list__icon" href="#" aria-label="Аккаунт покупателя">
+                  <svg class="user-list__login-icon" aria-hidden="true" focusable="false" width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-login"></use>
                   </svg>
                   <span>Войти</span>
                 </a>
-                <a class="user-list__icon" href="#">
-                  <svg class="user-list__basket-icon" width="16" height="16">
+                <a class="user-list__icon" href="#" aria-label="Корзина">
+                  <svg class="user-list__basket-icon" aria-hidden="true" focusable="false" width="16" height="16">
                     <use xlink:href="img/sprite.svg#icon-basket"></use>
                   </svg>
                   <span>Корзина</span>
@@ -73,13 +74,13 @@
           <div class="carosel">
             <div class="slider-control">
               <button class="slider-control__button slider-control__button--prev" type="button">
-                <svg class="slider-control__arrow-slider" width="20" height="20">
+                <svg class="slider-control__arrow-slider" aria-hidden="true" focusable="false" width="20" height="20">
                   <use xlink:href="img/sprite.svg#arrow-slider"></use>
                 </svg>
                 <span class="visually-hidden">Предыдущий товар.</span>
               </button>
               <button class="slider-control__button slider-control__button--next" type="button">
-                <svg class="slider-control__arrow-slider slider-control__arrow-slider--next" width="20" height="20">
+                <svg class="slider-control__arrow-slider slider-control__arrow-slider--next" aria-hidden="true" focusable="false" width="20" height="20">
                   <use xlink:href="img/sprite.svg#arrow-slider"></use>
                 </svg>
                 <span class="visually-hidden">Следующий товар.</span>
@@ -127,28 +128,28 @@
           <p class="advantages__title-section">Главные причины выбрать Drink2Go</p>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <svg class="advantages__item--icon" width="52" height="56">
+              <svg class="advantages__item--icon" aria-hidden="true" focusable="false" width="52" height="56">
                 <use xlink:href="img/sprite.svg#speed"></use>
               </svg>
               <h3 class="advantages__title">Скорость</h3>
               <p class="advantages__description">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--icon" width="52" height="56">
+              <svg class="advantages__item--icon" aria-hidden="true" focusable="false" width="52" height="56">
                 <use xlink:href="img/sprite.svg#convenience"></use>
               </svg>
               <h3 class="advantages__title">Удобство</h3>
               <p class="advantages__description">Легко помещается и в карман, и в маленькую сумочку</p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--icon" width="52" height="56">
+              <svg class="advantages__item--icon" aria-hidden="true" focusable="false" width="52" height="56">
                 <use xlink:href="img/sprite.svg#cheerfulness"></use>
               </svg>
               <h3 class="advantages__title">Бодрость</h3>
               <p class="advantages__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__item--icon" width="52" height="56">
+              <svg class="advantages__item--icon" aria-hidden="true" focusable="false" width="52" height="56">
                 <use xlink:href="img/sprite.svg#environmental"></use>
               </svg>
               <h3 class="advantages__title">Экологичность</h3>
@@ -293,7 +294,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -316,7 +317,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -339,7 +340,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -362,7 +363,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -385,7 +386,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -408,7 +409,7 @@
                   <div class="catalog__item-price price">
                     <span class="price__cost">225₽</span>
                     <button class="price__button button">
-                      <svg class="price__button--icon-add-cart" width="20" height="16">
+                      <svg class="price__button--icon-add-cart" aria-hidden="true" focusable="false" width="20" height="16">
                         <use xlink:href="img/sprite.svg#add-cart"></use>
                       </svg>
                       В корзину
@@ -436,7 +437,7 @@
                 </li>
                 <li class="pagination__item pagination__item--secondary">
                   <a class="pagination__item-button pagination__item-button--next" href="#">
-                    <svg class="pagination__item--icon-next" width="10" height="10">
+                    <svg class="pagination__item--icon-next" aria-hidden="true" focusable="false" width="10" height="10">
                       <use xlink:href="img/sprite.svg#arrow"></use>
                     </svg>
                     <span>Вперёд</span>
@@ -451,7 +452,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__contacts-map contacts">
-          <iframe class="contacts__map-inner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.20564173134!2d30.316861729229107!3d59.968266670063514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sby!4v1664530875812!5m2!1sru!2sby" width="320" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта с местом расположения интернет-магазина «Drink2Go»."></iframe>
+          <div class="contacts__map-inner" id="map"></div>
         </div>
         <div class="main-footer__container">
           <div class="main-footer__social social">
@@ -540,8 +541,9 @@
             </div>
           </div>
           <div class="main-footer__copyright copyright">
-            <a class="copyright__link" href="https://htmlacademy.ru/">
-              <span class="copyright__text">Разработано в HTML Academy</span>
+            <a class="copyright__link" href="https://htmlacademy.ru/" aria-label="Сайт HTML Academy">
+              <span class="copyright__text">Разработано в</span>
+              <span class="copyright__text--icon">HTML Academy</span>
               <svg class="copyright__icon" aria-hidden="true" focusable="false" width="12" height="16">
                 <use href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
@@ -550,6 +552,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="leaflet/leaflet.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
