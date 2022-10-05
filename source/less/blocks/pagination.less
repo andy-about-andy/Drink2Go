@@ -6,6 +6,11 @@
 
   @media (min-width: @tablet-width) {
     justify-content: right;
+    padding: 70px 0 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 0 120px;
   }
 }
 
@@ -56,22 +61,22 @@
   border-radius: 4px;
   outline: none;
 
-  &:hover .pagination__item--icon-prev,
-  &:focus .pagination__item--icon-prev,
-  &:hover .pagination__item--icon-next,
-  &:focus .pagination__item--icon-next {
+  &:hover .pagination__icon-prev,
+  &:focus .pagination__icon-prev,
+  &:hover .pagination__icon-next,
+  &:focus .pagination__icon-next {
     background-color: #9070ec;
     fill: #ffffff;
     color: #ffffff;
   }
 
-  &:active .pagination__item--icon-prev,
-  &:active .pagination__item--icon-next {
+  &:active .pagination__icon-prev,
+  &:active .pagination__icon-next {
     fill: #ffffff;
   }
 
-  &:disabled .pagination__item--icon-prev,
-  &:disabled .pagination__item--icon-next {
+  &:disabled .pagination__icon-prev,
+  &:disabled .pagination__icon-next {
     fill: #ffffff;
   }
 
@@ -99,7 +104,7 @@
   }
 }
 
-.pagination__item--icon-prev {
+.pagination__icon-prev {
   display: block;
   padding: 15px;
   fill: #7859cf;
@@ -109,7 +114,7 @@
   }
 }
 
-.pagination__item--icon-next {
+.pagination__icon-next {
   display: block;
   padding: 15px;
   fill: #7859cf;

@@ -1,7 +1,7 @@
 const map = L.map('map')
   .setView({
-    lat: 59.96831,
-    lng: 30.31748,
+    lat: 59.96838,
+    lng: 30.31740,
   }, 18);
 
 L.tileLayer(

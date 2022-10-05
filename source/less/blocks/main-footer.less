@@ -26,10 +26,11 @@
 .main-footer__social {
   display: flex;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px 20px 0;
 
   @media (min-width: @tablet-width) {
     width: 728px;
+    padding: 40px 0 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,6 +43,7 @@
 .main-footer__link-logo {
   width: 82px;
   height: 36px;
+  padding-top: 3px;
   text-decoration: none;
   outline: none;
 
@@ -88,22 +90,27 @@
   padding: 20px 20px;
 
   @media (min-width: @tablet-width) {
-    width: 728px;
     display: grid;
     grid-template-columns: 223px 222px 223px;
     column-gap: 30px;
+    width: 728px;
+    padding: 8px 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1012px;
     grid-template-columns: 317px 318px 318px;
     padding: 0;
+    width: 1012px;
   }
 }
 
 .main-footer__information-container {
   position: relative;
-  padding: 20px 0;
+  padding: 22px 0 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 10px;
@@ -139,11 +146,15 @@
 }
 
 .main-footer__information-title {
-  margin: 0;
+  margin: 0 0 20px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.02em;
   color: @primary;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .main-footer__information-list {
@@ -161,8 +172,7 @@
 .main-footer__link {
   display: inline-block;
   min-height: 32px;
-  margin-bottom: 4px;
-  padding: 8px 0;
+  margin: 0 0 4px;
   box-sizing: border-box;
   letter-spacing: 0.02em;
   text-decoration: none;

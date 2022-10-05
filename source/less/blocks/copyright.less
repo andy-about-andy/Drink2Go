@@ -1,8 +1,13 @@
 .copyright {
-  padding: 20px 0 30px;
+  padding: 0 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 1360px;
+    padding-top: 8px;
   }
 }
 
@@ -16,14 +21,14 @@
 
   &:hover .copyright__icon,
   &:focus .copyright__icon,
-  &:hover .copyright__text--icon,
-  &:focus .copyright__text--icon {
+  &:hover .copyright__text-icon,
+  &:focus .copyright__text-icon {
     fill: @primary;
     color: @primary;
   }
 
   &:active .copyright__icon,
-  &:active .copyright__text--icon {
+  &:active .copyright__text-icon {
     fill: #593cac;
     color: #593cac;
   }
@@ -34,7 +39,7 @@
   font-size: 12px;
 }
 
-.copyright__text--icon {
+.copyright__text-icon {
   font-size: 12px;
   padding-right: 4px;
 }
