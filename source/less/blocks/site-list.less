@@ -38,7 +38,9 @@
 }
 
 .site-list__item--active .site-list__link {
-  color: @primary;
+  @media (min-width: @tablet-width) {
+    color: @primary;
+  }
 }
 
 .site-list__link {
@@ -53,19 +55,22 @@
   text-transform: uppercase;
   background: #ffffff;
   box-shadow: 0 1px 0 @secondary;
+  outline: none;
+
+  &:active {
+    color: @black;
+    background-color: @secondary;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 32px 20px;
     box-shadow: none;
+
+    &:hover,
+    &:focus {
+      color: @primary;
+    }
   }
-
-  // &:hover {
-  //   color: @pink;
-  // }
-
-  // &:active {
-  //   color: fade(#ffffff, 30%);
-  // }
 
   @media (min-width: @desktop-width) {
 

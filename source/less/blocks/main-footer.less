@@ -43,6 +43,7 @@
   width: 82px;
   height: 36px;
   text-decoration: none;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     width: 170px;
@@ -166,4 +167,14 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   color: @black;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: #9070ec;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }

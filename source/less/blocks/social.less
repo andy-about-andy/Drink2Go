@@ -2,6 +2,15 @@
 
 }
 
+.social__link {
+  outline: none;
+
+  &:hover .social__icon,
+  &:focus .social__icon {
+    fill: @primary;
+  }
+}
+
 .social__list {
   display: flex;
   justify-content: space-between;
@@ -18,11 +27,17 @@
 .social__item {
   width: 40px;
   height: 40px;
+  border-radius: 4px;
+
+  &:active {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
 }
 
 .social__icon {
   display: block;
   padding: 10px;
+  fill: #bdbdbd;
 }
 
 .social__icon--pinterest {

@@ -20,6 +20,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover::after,
+  &:focus::after {
+    background-color: @primary;
+    opacity: 0.25;
+  }
 }
 
 .pagination-button__slider:last-child {
