@@ -12,6 +12,21 @@
   margin: 0 auto;
   color: #bdbdbd;
   text-decoration: none;
+  outline: none;
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon,
+  &:hover .copyright__text--icon,
+  &:focus .copyright__text--icon {
+    fill: @primary;
+    color: @primary;
+  }
+
+  &:active .copyright__icon,
+  &:active .copyright__text--icon {
+    fill: #593cac;
+    color: #593cac;
+  }
 }
 
 .copyright__text {
@@ -27,4 +42,5 @@
 .copyright__icon {
   width: 12px;
   height: 16px;
+  fill: #bdbdbd;
 }

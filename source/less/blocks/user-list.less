@@ -27,6 +27,11 @@
   letter-spacing: 0.02em;
   text-decoration: none;
   color: @black;
+  outline: none;
+
+  &:active {
+    background-color: @secondary;
+  }
 
   span {
     display: none;
@@ -39,6 +44,27 @@
   @media (min-width: @desktop-width) {
     min-width: 114px;
 
+    &:hover,
+    &:focus {
+      color: @primary;
+    }
+
+    &:hover .user-list__login-icon,
+    &:focus .user-list__login-icon,
+    &:hover .user-list__basket-icon,
+    &:focus .user-list__basket-icon {
+      fill: @primary;
+    }
+
+    &:active {
+      color: @primary;
+    }
+
+    &:active .user-list__login-icon,
+    &:active .user-list__basket-icon {
+      fill: @primary;
+    }
+
     span {
       display: block;
       padding: 32px 20px 0 44px;
@@ -50,6 +76,7 @@
   position: absolute;
   top: 22px;
   left: 22px;
+  fill: @black;
 
   @media (min-width: @tablet-width) {
     top: 32px;
@@ -61,6 +88,7 @@
   position: absolute;
   top: 22px;
   left: 22px;
+  fill: @black;
 
   @media (min-width: @tablet-width) {
     top: 32px;

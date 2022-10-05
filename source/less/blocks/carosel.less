@@ -2,9 +2,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
 
   @media (min-width: @desktop-width) {
     flex-direction: row-reverse;
+    width: 1440px;
   }
 }
