@@ -62,12 +62,13 @@
   outline: none;
 
   &:hover .pagination__icon-prev,
-  &:focus .pagination__icon-prev,
   &:hover .pagination__icon-next,
+  &:focus .pagination__icon-prev,
   &:focus .pagination__icon-next {
+    color: #ffffff;
     background-color: #9070ec;
     fill: #ffffff;
-    color: #ffffff;
+    border-radius: 4px;
   }
 
   &:active .pagination__icon-prev,
@@ -125,6 +126,12 @@
   }
 }
 
+.pagination__item-button:focus .pagination__text {
+  color: #ffffff;
+  background-color: #9070ec;
+  border-radius: 4px;
+}
+
 .pagination__item-button--next {
   span {
     display: none;
@@ -138,7 +145,7 @@
 
     span {
       display: block;
-      padding-top: 8px;
+      padding: 8px 0;
     }
   }
 }
