@@ -1,25 +1,26 @@
-.pagination-button {
-  position: absolute;
-  top: 708px;
-  left: 618px;
+.product-new .swiper-pagination {
   display: none;
-  width: 202px;
   height: 24px;
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: block;
   }
 }
 
-.pagination-button__slider {
+.product-new .swiper-pagination-bullet {
+  bottom: 52px;
+}
+
+.pagination-button .swiper-pagination-bullet {
   position: relative;
-  width: 62px;
+  width: 63px;
   height: 24px;
   margin: 0 8px 0 0;
   padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &:hover::after,
   &:focus::after {
@@ -28,11 +29,11 @@
   }
 }
 
-.pagination-button__slider:last-child {
+.pagination-button .pagination-button:last-child {
   margin: 0;
 }
 
-.pagination-button__slider::after {
+.pagination-button .swiper-pagination-bullet::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -42,6 +43,6 @@
   background-color: #ffffff;
 }
 
-.pagination-button .pagination-button__slider--current::after {
+.pagination-button .swiper-pagination-bullet-active::after {
   background-color: @primary;
 }
