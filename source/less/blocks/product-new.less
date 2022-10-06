@@ -78,13 +78,17 @@
   }
 }
 
+.test {
+  width: 100%;
+}
+
 .product-new__wrapper-image {
   width: 280px;
   margin: 20px auto 7px;
 
   @media (min-width: @tablet-width) {
     width: 476px;
-    margin: 20px auto 10px;
+    margin: 0 auto 10px;
     order: 3;
   }
 
@@ -95,8 +99,11 @@
 }
 
 .product-new__wrapper {
+  min-height: 286px;
+
   @media (min-width: @tablet-width) {
     width: 608px;
+    min-height: 292px;
     margin: 60px auto 0;
   }
 
@@ -149,6 +156,10 @@
   width: 230px;
   margin: 0 auto;
 
+  @media (min-width: @tablet-width) {
+    flex-wrap: nowrap;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 0 auto 0 0;
   }
@@ -191,6 +202,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: @tablet-width) {
     width: 80px;

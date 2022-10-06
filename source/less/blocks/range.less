@@ -107,9 +107,9 @@
 
 .range__wrapper-inputs {
   position: relative;
-  width: 280px;
   display: flex;
   justify-content: space-between;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     width: 220px;
@@ -172,6 +172,7 @@
   }
 }
 
+// убирает стрелки у input (type="number")
 .range__input[type="number"]::-webkit-outer-spin-button,
 .range__input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
