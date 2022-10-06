@@ -19,7 +19,7 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
-    background: linear-gradient(180deg, rgba(243, 235, 225, 1) 71%, rgba(255, 255, 255, 1) 41%);
+    background: linear-gradient(180deg, rgba(243, 235, 225, 1) 76%, rgba(255, 255, 255, 1) 41%);
   }
 
   @media (min-width: @desktop-width) {
@@ -30,26 +30,32 @@
 }
 
 .product-new__carosel--lavender {
+  padding-bottom: 60px;
   background-color: #eae6fc;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(180deg, rgba(234, 230, 252, 1) 71%, rgba(255, 255, 255, 1) 41%);
+    padding-bottom: 0;
+    background: linear-gradient(180deg, rgba(234, 230, 252, 1) 76%, rgba(255, 255, 255, 1) 41%);
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 714px;
     background: none;
     background-color: #eae6fc;
   }
 }
 
 .product-new__carosel--espresso {
+  padding-bottom: 60px;
   background-color: #e5e6e8;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(180deg, rgba(229, 230, 232, 1) 71%, rgba(255, 255, 255, 1) 41%);
+    padding-bottom: 0;
+    background: linear-gradient(180deg, rgba(229, 230, 232, 1) 76%, rgba(255, 255, 255, 1) 41%);
   }
 
   @media (min-width: @desktop-width) {
+    min-height: 714px;
     background: none;
     background-color: #e5e6e8;
   }
@@ -139,7 +145,6 @@
 
 .product-new__order {
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   width: 230px;
   margin: 0 auto;
@@ -165,4 +170,63 @@
 
 .product-new__button {
   margin-left: 21px;
+}
+
+.product-new .swiper-button-prev::after,
+.product-new .swiper-button-next::after {
+  color: @primary;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.product-new .swiper-button-prev,
+.product-new .swiper-button-next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 656px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 640px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 80px;
+    height: 714px;
+  }
+}
+
+.product-new .swiper-button-prev:hover,
+.product-new .swiper-button-prev:focus {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.product-new .swiper-button-next:hover,
+.product-new .swiper-button-next:focus {
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.product-new .swiper-button-prev:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.product-new .swiper-button-next:active {
+  background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.product-new .swiper-button-prev {
+  left: 0;
+  right: auto;
+}
+
+.product-new .swiper-button-next {
+  left: auto;
+  right: 0;
 }
