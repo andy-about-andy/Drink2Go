@@ -117,6 +117,7 @@
   right: 0;
   z-index: 2;
   width: 100%;
+  min-height: 60px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -124,6 +125,7 @@
     justify-content: space-between;
     position: static;
     width: 580px;
+    min-height: 80px;
     margin: 0;
   }
 
@@ -134,10 +136,13 @@
 }
 
 .main-nav__list {
+  min-height: 60px;
   margin: 0;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
+    min-height: 80px;
   }
 }
